@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Blog, Category
 
 class BlogAdmin(admin.ModelAdmin):
-   exclude = ['posted_on']
+   exclude = ['posted_on', 'read_count']
    prepopulated_fields = {'slug': ('title',)}
  
 class CategoryAdmin(admin.ModelAdmin):
